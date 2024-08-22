@@ -1,12 +1,29 @@
-import './App.css'
+import Footer from "./components/footer";
+import Header from "./components/header";
+import Advant from "./pages/advant";
+import Features from "./pages/features";
+import Home from "./pages/home";
+import HowToPlay from "./pages/howToPlay";
+import MyFortune11 from "./pages/myfortune11";
+import Overview from "./pages/overview";
+import useScrollToElement from "./useScrollToElement";
+import FAQ from "./pages/faq";
 
-function App() {
-
+const App = () => {
+  useScrollToElement();
   return (
     <>
-      <h1>My Fortune 11</h1>
+      <Header />
+      <Home />
+      <Overview />
+      <MyFortune11 />
+      <FAQ />
+      <HowToPlay />
+      <Features />
+      <Advant />
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
