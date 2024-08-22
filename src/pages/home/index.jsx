@@ -18,7 +18,7 @@ const Home = () => {
     },
   ];
   return (
-    <section ref={homeRef} className="h-60">
+    <section ref={homeRef} className="h-80">
       <Carousel slides={slides} autoSlideInterval={3000} />
     </section>
   );

@@ -17,10 +17,10 @@ const App = () => {
       <Home />
       <Overview />
       <MyFortune11 />
-      <FAQ />
       <HowToPlay />
       <Features />
       <Advant />
+      <FAQ />
       <Footer />
     </>
   );
