@@ -37,10 +37,10 @@ const Footer = () => {
             Connect with us
           </h3>
           <div className="flex justify-center gap-2 mt-4">
-            <Connect icon={<FaFacebook />} connectLink={"https://www.facebook.com/myfortune11l?mibextid=ZbWKwL"} />
-            <Connect icon={<FaYoutube />} connectLink={"https://www.youtube.com/@myfortune11official"}/>
-            <Connect icon={<FaLinkedin connectLink={"https://www.linkedin.com/company/myfortune11"}/>} />
-            <Connect icon={<FaInstagram />} connectLink={"https://www.instagram.com/myfortune11?igsh=MWxsdWFlYnBsZmdkZw%3D%3D"} />
+            <Connect icon={<FaFacebook />} connectlink={"https://www.facebook.com/myfortune11l?mibextid=ZbWKwL"} />
+            <Connect icon={<FaYoutube />} connectlink={"https://www.youtube.com/@myfortune11official"}/>
+            <Connect icon={<FaLinkedin connectlink={"https://www.linkedin.com/company/myfortune11"}/>} />
+            <Connect icon={<FaInstagram />} connectlink={"https://www.instagram.com/myfortune11?igsh=MWxsdWFlYnBsZmdkZw%3D%3D"} />
           </div>
           <p className="leading-4 text-[0.875rem] text-white text-center mt-8">
             {" "}
