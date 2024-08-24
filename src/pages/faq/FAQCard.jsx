@@ -3,6 +3,8 @@ import { useState, useRef, useEffect } from "react";
 import { BsQuestionDiamondFill } from "react-icons/bs";
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import {fadeIn} from "../../motionVariants"
 
 const FAQCard = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +20,11 @@ const FAQCard = ({ question, answer }) => {
   }, [isOpen]);
 
   return (
-    <div className="rounded-[1.25rem] shadow-sm bg-white text-[calc(1.325rem + .9vw)] font-normal">
+    <motion.div 
+    variants={fadeIn("up",0.1)}
+    initial="hidden"
+    whileInView={"show"}
+     className="rounded-[1.25rem] shadow-sm bg-white text-[calc(1.325rem + .9vw)] font-normal">
       <button
         className="w-full text-left px-8 py-[1.2rem] flex justify-between items-center focus:outline-none text-[#032071]"
         onClick={() => setIsOpen(!isOpen)}
@@ -52,7 +58,7 @@ const FAQCard = ({ question, answer }) => {
           {answer}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
