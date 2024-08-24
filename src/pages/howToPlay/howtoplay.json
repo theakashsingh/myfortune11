@@ -1,0 +1,26 @@
+[
+    {
+      "image": "https://www.myfortune11.com/myfortune-img/e1.png",
+      "number": "1",
+      "title": "Select a Match:",
+      "description": "Pick an upcoming match you're excited to play."
+    },
+    {
+      "image": "https://www.myfortune11.com/myfortune-img/e6.png",
+      "number": "2",
+      "title": "Create Your Team:",
+      "description": "Use your knowledge and strategy to pick the best team."
+    },
+    {
+      "image": "https://www.myfortune11.com/myfortune-img/e4.png",
+      "number": "3",
+      "title": "Join Contest:",
+      "description": "Compete with others and showcase your fantasy skills."
+    },
+    {
+      "image": "https://www.myfortune11.com/myfortune-img/e3.png",
+      "number": "4",
+      "title": "Earn Big:",
+      "description": "Watch the match and see how your team performs."
+    }
+  ]
