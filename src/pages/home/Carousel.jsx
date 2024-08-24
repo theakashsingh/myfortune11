@@ -45,16 +45,17 @@ const CarouselButton = ({
 const CarouselIndicators = ({
   position,
   nextActiveIndex,
-  indicatorsColor,
   clickHandler,
   slides,
 }) => (
-  <ol className={`absolute bottom-4 flex ${position} space-x-2 z-20`}>
+  <ol
+    className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 flex ${position} space-x-2 z-20`}
+  >
     {slides.map((_, i) => (
       <li
         key={i}
-        className={`w-2 h-2 rounded-full ${
-          i === nextActiveIndex ? `bg-${indicatorsColor}` : "bg-gray-300"
+        className={`w-8 h-1 bg-black ${
+          i === nextActiveIndex ? "opacity-100" : "opacity-50"
         } cursor-pointer`}
         onClick={() => {
           slides.length !== 1 && i !== nextActiveIndex ? clickHandler(i) : null;
@@ -201,6 +202,8 @@ const Carousel = ({
       }
       onMouseMove={e => interactionMode === "swipe" && e.preventDefault()}
       onTouchMove={e => interactionMode === "swipe" && e.preventDefault()}
+      onMouseEnter={() => stopAutoSliding()}  // Stop sliding on hover
+      onMouseLeave={() => startAutoSliding()} // Resume sliding when mouse leaves
     >
       {slides.map((el, i) => (
         <div

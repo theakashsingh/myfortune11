@@ -18,7 +18,7 @@ const Home = () => {
     },
   ];
   return (
-    <section ref={homeRef} className="h-80">
+    <section ref={homeRef} className="w-full sm:aspect-[16/6] aspect-square">
       <Carousel slides={slides} autoSlideInterval={3000} />
     </section>
   );
