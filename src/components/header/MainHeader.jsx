@@ -7,7 +7,7 @@ const MainHeader = () => {
   return (
     <>
       <Header>
-      <NavTag to={"/"} scroll={"home"} title={"Home"}/>
+      <NavTag to={"/home"} scroll={"home"} title={"Home"}/>
       <NavTag to={"/overview"} scroll={"overview"} title={"Overview"}/>
       <NavTag to={"/myfortune11"} scroll={"myfortune11"} title={"My Fortune 11"}/>
       <NavTag to={"/faq"} scroll={"faq"} title={"FAQ"}/>

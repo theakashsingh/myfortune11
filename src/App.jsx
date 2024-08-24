@@ -1,3 +1,4 @@
+import { useScroll } from "./pages/scrollContext";
 import Footer from "./components/footer";
 import Advant from "./pages/advant";
 import Features from "./pages/features";
@@ -10,9 +11,10 @@ import FAQ from "./pages/faq";
 import MainHeader from "./components/header/MainHeader";
 
 const App = () => {
+  const {appRef} = useScroll()
   useScrollToElement();
   return (
-    <>
+    <div ref={appRef}>
       <MainHeader />
       <Home />
       <Overview />
@@ -22,7 +24,7 @@ const App = () => {
       <Advant />
       <FAQ />
       <Footer />
-    </>
+    </div>
   );
 };
 

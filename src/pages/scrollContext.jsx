@@ -5,6 +5,7 @@ import { createContext, useContext, useRef, useCallback } from 'react';
 const ScrollContext = createContext();
 
 export function ScrollProvider({ children }) {
+  const appRef = useRef(null)
   const homeRef = useRef(null);
   const overviewRef = useRef(null);
   const myFortune11Ref = useRef(null);
@@ -14,8 +15,9 @@ export function ScrollProvider({ children }) {
   const advantRef = useRef(null);
 
   const scrollTo = useCallback((refName) => {
+    
     const map = {
-      '': homeRef,
+      '': appRef,
       home: homeRef,
       overview: overviewRef,
       myfortune11: myFortune11Ref,
@@ -30,7 +32,8 @@ export function ScrollProvider({ children }) {
     }
   }, []);
 
-  const value = { homeRef, overviewRef, myFortune11Ref, faqRef, howToPlayRef,featuresRef, advantRef, scrollTo };
+  
+  const value = {appRef, homeRef, overviewRef, myFortune11Ref, faqRef, howToPlayRef,featuresRef, advantRef, scrollTo };
 
   return (
     <ScrollContext.Provider value={value}>
