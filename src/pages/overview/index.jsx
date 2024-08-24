@@ -23,7 +23,7 @@ const Overview = () => {
           </div>
           <div className="p-3">
             {overview.map((p, i) => (
-              <p key={i} className="mb-2">{p.p}</p>
+              <p key={i} className="mb-[25px] text-[21px] leading-normal">{p.p}</p>
             ))}
           </div>
         </div>
