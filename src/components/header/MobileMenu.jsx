@@ -7,7 +7,7 @@ const MobileMenu = ({ isMenuOpen, children }) => {
   return (
     <div
       ref={menuRef}
-      className={`md:hidden bg-black text-white flex flex-col space-y-4 overflow-hidden transition-all duration-500 ease-in-out ${
+      className={`md:hidden md:max-w-3xl sm:max-w-lg mx-auto w-full bg-black text-white flex flex-col space-y-4 overflow-hidden transition-all duration-500 ease-in-out ${
         isMenuOpen ? "max-h-[400px] p-4 opacity-100" : "max-h-0 p-0 opacity-0"
       }`}
     >

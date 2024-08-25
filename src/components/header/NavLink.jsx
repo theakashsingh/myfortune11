@@ -12,22 +12,24 @@ const NavTag = ({ to, scroll, title }) => {
   const handleNavLink = () => {
     if (title === "Contact") {
       connectViaWhatsApp(phoneNumber, message);
-    } else if (title === "+91-6390010019") {
-        connectViaTelephone(title);
+    } else if (title === "+91-7499111213") {
+      connectViaTelephone(title);
     } else {
       scrollTo(scroll);
     }
   };
   return (
-    <div>
-      <NavLink
-        to={to}
-        onClick={handleNavLink}
-        className="relative py-[1.2rem] px-[1rem] after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:w-[0.4rem] after:h-[0.4rem] after:bg-[#032071] after:rounded-full after:opacity-0 hover:after:opacity-100 transition-opacity duration-300"
-      >
-        {title}
-      </NavLink>
-    </div>
+    <>
+      <div onClick={handleNavLink} className="cursor-pointer">
+        <NavLink
+          to={to}
+          className="relative py-[1.2rem] pr-[1rem] after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:w-[0.4rem] after:h-[0.4rem] after:bg-[#032071] after:rounded-full after:opacity-0 hover:after:opacity-100 transition-opacity duration-300"
+        >
+          {title}
+        </NavLink>
+      </div>
+      <span className="md:hidden w-full h-[1px] bg-white"></span>
+    </>
   );
 };
 
