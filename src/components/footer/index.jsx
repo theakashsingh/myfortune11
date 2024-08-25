@@ -15,22 +15,22 @@ const Footer = () => {
               <LinkButton to={"/home"} text={"Home"} />
             </li>
             <li className="outline-none px-4 leading-10">
-              <LinkButton to={"/"} text={"Privacy Policy"} />
+              <LinkButton to={"/privacy-policy"} text={"Privacy Policy"} />
             </li>
             <li className="outline-none px-4 leading-10">
-              <LinkButton to={"/"} text={"Terms & Conditions"} />
+              <LinkButton to={"/terms&conditions"} text={"Terms & Conditions"} />
             </li>
             <li className="outline-none px-4 leading-10">
-              <LinkButton to={"/"} text={"How To Play"} />
+              <LinkButton to={"/how-to-play"} text={"How To Play"} />
             </li>
             <li className="outline-none px-4 leading-10">
-              <LinkButton to={"/"} text={"Legality"} />
+              <LinkButton to={"/legality"} text={"Legality"} />
             </li>
             <li className="outline-none px-4 leading-10">
-              <LinkButton to={"/"} text={"Fair Play"} />
+              <LinkButton to={"/fair-play"} text={"Fair Play"} />
             </li>
             <li className="outline-none px-4 leading-10">
-              <LinkButton to={"/"} text={"Fantasy Point System"} />
+              <LinkButton to={"/fantasy-point-system"} text={"Fantasy Point System"} />
             </li>
           </ul>
           <h3 className="text-[#FFE800] font-medium mb-6 mt-12 text-center text-[1.25rem]">
