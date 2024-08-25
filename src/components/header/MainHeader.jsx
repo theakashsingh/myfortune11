@@ -10,9 +10,9 @@ const MainHeader = () => {
       <NavTag to={"/home"} scroll={"home"} title={"Home"}/>
       <NavTag to={"/overview"} scroll={"overview"} title={"Overview"}/>
       <NavTag to={"/myfortune11"} scroll={"myfortune11"} title={"My Fortune 11"}/>
-      <NavTag to={"/faq"} scroll={"/"} title={"FAQ"}/>
-      <NavTag to={"/faq"} scroll={"/"} title={"Contact"}/>
-      <NavTag to={"/faq"} scroll={"/"} title={"+91-6390010019"}/>
+      <NavTag to={"/"} scroll={""} title={"FAQ"}/>
+      <NavTag to={"/"} scroll={""} title={"Contact"}/>
+      <NavTag to={"/"} scroll={""} title={"+91-6390010019"}/>
       </Header>
     </>
   );
