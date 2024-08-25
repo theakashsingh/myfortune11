@@ -4,8 +4,17 @@ import { FaYoutube } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { connectViaWhatsApp } from "../../connect";
+import { Link } from "react-router-dom";
+import { useScroll } from "../../pages/scrollContext";
 
 const Footer = () => {
+  const {scrollTo} = useScroll()
+  const phoneNumber = "+916390010019";
+  const message = "I want More Information About My Fortune 11";
+  const handleConnect = () => {
+    connectViaWhatsApp(phoneNumber,message)
+ };
   return (
     <div className="w-full py-12 bg-howToPlay bg-[#0000004a] bg-blend-color bg-cover">
       <div className="w-full mx-auto flex justify-center">
@@ -45,12 +54,12 @@ const Footer = () => {
           <p className="leading-4 text-[0.875rem] text-white text-center mt-8">
             {" "}
             © Copyright 2024 by{" "}
-            <span className="text-[#FFE800] hover:text-[#4611A7]">
+            <Link to={"/"} onClick={()=>scrollTo(scroll(""))} className="text-[#FFE800] hover:text-[#4611A7]">
               MY FORTUNE 11
-            </span>
+            </Link>
             , All rights reserved.
           </p>
-          <span className="fixed bottom-3 right-1 text-[15px] text-white font-bold flex items-center justify-center bg-[#FFA500] px-[13px] py-[3px] rounded-full">
+          <span onClick={handleConnect} className="hover:cursor-pointer fixed bottom-3 right-1 text-[15px] text-white font-bold flex items-center justify-center bg-[#FFA500] px-[13px] py-[3px] rounded-full">
             <img src={"https://www.myfortune11.com/assets/images/icons/WhatsApp.svg.webp"} alt="connect to start" className="w-7"/>
             Get Started Now
           </span>

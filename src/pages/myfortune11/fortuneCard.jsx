@@ -1,16 +1,14 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import { fadeIn } from "../../motionVariants";
+import { connectViaWhatsApp } from "../../connect";
 
 const FortuneCard = ({ image, title }) => {
-  const phoneNumber = "916390010019";
-  const message = "Hello! I would like to connect with you.";
+  const phoneNumber = "+916390010019";
+  const message = "I want More Information About My Fortune 11";
 
-  const handleClick = () => {
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
-    )}`;
-    window.open(whatsappLink);
+  const handleConnect = () => {
+     connectViaWhatsApp(phoneNumber,message)
   };
   return (
     <motion.div
@@ -29,7 +27,7 @@ const FortuneCard = ({ image, title }) => {
       <div className="p-4 text-center flex-grow">
         <h3 className="text-lg font-semibold text-gray-800 mb-2">{title}</h3>
         <button
-          onClick={handleClick}
+          onClick={handleConnect}
           className="bg-[#032071] border-2 border-solid border-[#032071] font-semibold sm:min-w-[170px] min-w-full text-white py-2 px-4 rounded-full 
           relative hover:ring-2 hover:ring-red-500 hove:ring-opacity-50
           hover:shadow-[0_0_10px_5px_rgba(255,0,0,0.6)] transition-all"

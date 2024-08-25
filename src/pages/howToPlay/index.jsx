@@ -3,9 +3,16 @@ import HOPCard from "./HTPCard";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../motionVariants";
 import HTPJson from "./howtoplay.json";
+import { connectViaWhatsApp } from "../../connect";
 
 const HowToPlay = () => {
   const { howToPlayRef } = useScroll();
+  const phoneNumber = "+916390010019";
+  const message = "I want More Information About My Fortune 11";
+
+  const handleConnect = () => {
+     connectViaWhatsApp(phoneNumber,message)
+  };
   return (
     <div
       ref={howToPlayRef}
@@ -52,6 +59,7 @@ const HowToPlay = () => {
             variants={fadeIn("up", 0.1)}
             initial="hidden"
             whileInView={"show"}
+            onClick={handleConnect}
             className="rounded-full font-semibold px-12 text-base py-[0.375rem] bg-[#cf1416] text-white cursor-pointer inline-block relative hover:ring-2 hover:bg-[#032071] hover:ring-white hove:ring-opacity-50
           hover:shadow-[0_0_10px_5px_rgba(255,0,0,0.6)] transition-all"
           >
