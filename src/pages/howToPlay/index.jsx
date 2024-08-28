@@ -7,11 +7,11 @@ import { connectViaWhatsApp } from "../../connect";
 
 const HowToPlay = () => {
   const { howToPlayRef } = useScroll();
-  const phoneNumber = "+916390010019";
+  const phoneNumber = "+917499111213";
   const message = "I want More Information About My Fortune 11";
 
   const handleConnect = () => {
-     connectViaWhatsApp(phoneNumber,message)
+    connectViaWhatsApp(phoneNumber, message);
   };
   return (
     <div

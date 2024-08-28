@@ -6,7 +6,7 @@ import { connectViaTelephone, connectViaWhatsApp } from "../../connect";
 
 const NavTag = ({ to, scroll, title }) => {
   const { scrollTo } = useScroll();
-  const phoneNumber = "+916390010019";
+  const phoneNumber = "+917499111213";
   const message = "I want More Information About My Fortune 11";
 
   const handleNavLink = () => {
